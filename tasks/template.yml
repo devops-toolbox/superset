@@ -1,0 +1,10 @@
+---
+# Template configuration files for superset
+
+- name: template is copied
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  become: true
+  loop: "{{ superset_templates_copy }}"
+  when: superset_copy_templates

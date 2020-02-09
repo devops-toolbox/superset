@@ -1,0 +1,19 @@
+---
+# defaults file for superset
+
+superset_packages_state: present
+superset_remove_packages: true
+superset_enable_service: true
+superset_enable_selinux: true
+superset_copy_templates: true
+superset_firewall_configure: true
+superset_firewall_rules:
+  - service: ssh
+  - port: 3389
+superset_users:
+  - user: devops
+    group: docker
+superset_selinux_booleans:
+  - name: ftp_home_dir
+    state: true
+    persistent: true

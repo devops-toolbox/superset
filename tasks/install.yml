@@ -1,0 +1,27 @@
+---
+# Install superset packages
+
+- name: unwanted packages are removed
+  package:
+    name: "{{ superset_packages_remove }}"
+    state: absent
+  become: true
+  when: superset_remove_packages
+
+- name: prereq repositories are installed
+  package:
+    name: "{{ superset_packages_repos }}"
+    state: "{{ superset_packages_state }}"
+  become: true
+
+- name: prereq packages are installed
+  package:
+    name: "{{ superset_packages_prereq }}"
+    state: "{{ superset_packages_state }}"
+  become: true
+
+- name: packages are installed
+  package:
+    name: "{{ superset_packages_install }}"
+    state: "{{ superset_packages_state }}"
+  become: true
