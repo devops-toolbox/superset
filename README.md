@@ -8,10 +8,10 @@ superset: Superset
 Ansible galaxy:
 ---------------
 
-[https://galaxy.ansible.com/devops-toolbox.superset](https://galaxy.ansible.com/devops-toolbox.superset)
+[https://galaxy.ansible.com/devopstoolbox.superset](https://galaxy.ansible.com/devopstoolbox.superset)
 
 ```bash
-ansible-galaxy install devops-toolbox.superset
+ansible-galaxy install devopstoolbox.superset
 ```
 
 Requirements
@@ -60,7 +60,7 @@ Example Playbook
   tasks:
     - name: superset is configured
       import_role:
-        name: devops-toolbox.superset
+        name: devopstoolbox.superset
       vars:
         superset_packages_state: present
         superset_remove_packages: true
@@ -89,4 +89,4 @@ MIT
 Author Information
 ------------------
 
-- [Mihai Criveti](https://www.linkedin.com/in/devops-toolbox.)
+- [Mihai Criveti](https://www.linkedin.com/in/devopstoolbox.)
